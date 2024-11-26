@@ -1,8 +1,5 @@
 # Laporan Proyek Machine Learning - Lulu Nadhiatun Anisa
 
-## Domain Proyek
-Domain yang dipilih untuk proyek *machine learning* ini adalah meninjau **Rekomenadisi Film **  
-
 ## Project Overview
 ![Film](https://github.com/user-attachments/assets/79169bc0-4e92-4d67-9e9d-d8c40e0462c6)
 
@@ -53,6 +50,12 @@ Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berda
 | Visibility | Publik |
 | Tags | Movie and TV Show, Recommender System |
 | Usability | 7.94 |
+
+
+
+
+
+
 
 Berikut informasi pada dataset: 
 Data yang digunakan dalam pembuatan model merupakan data primer, data ini didapat dari sebuah perusahaan pertanian Amerika, yang disediakan secara publik di kaggle dengan nama datasets yaitu: _Apple Quality_
