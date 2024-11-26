@@ -78,8 +78,23 @@ Pada file `links.csv` berisi daftar links film yang mengarah ke laman website fi
 - `imdbId` : memuat nomor ID film yang merujuk pada website IMDb
 - `tmdbId` : memuat nomor ID film yang merujuk pada website TMDB
 
-## Data Preprocessing
 ## Data Preparation
+Melakukan preprocessing dengan menggabungkan data terlebih dulu seperti :
+- Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada movieId dengan menyimpanya pada variabel `movie_all`
+- Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada userId dengan menyimpanya pada variabel `user_all`
+- Menggabungkan beberapa file seperti `links`, `movies`, `ratings`, dan `tags` dengan menyimpannya pada variabel `movie_info`
+- Menggabungkan dataframe ratings dengan `movie_info` Berdasarkan Nilai `movieId`
+- Menggabungkan data dengan featuers `movies`
+
+Setelah selesai melakukan penggabungan data, dapat melanjutkannya dengan melakukan beberapa tahapan sebagai berikut yaitu : 
+- Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak, jika ada data kosong maka saya akan.menghapusnya
+- Menggabungkan variabel : untuk menggabungkan beberapa variabel berdasarkan id yang sifatnya unik (berbeda dari yang lain).
+- Mengurutan data : untuk mengurutkan data berdasarkan movieId secara asceding.
+- Mengatasi duplikasi data : untuk mengatasi data yang nilai atau isinya sama.
+- Konversi data menjadi iist : untuk mengubah data menjadi list
+- Membuat dictionary : Untuk membuat dictionary dari data yang ada.
+- Mapping data : untuk memetakan data
+  
 ## Modeling dan Result
 ## Evaluation
 ## Referensi
