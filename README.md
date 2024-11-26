@@ -51,6 +51,33 @@ Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berda
 | Tags | Movie and TV Show, Recommender System |
 | Usability | 7.94 |
 
+### Variabel-variabel pada dataset:
+Pada file `movies.csv` berisi daftar film yang memiliki 62.423 records data dan 3 feature:
+
+- `movieId` : memuat nomor ID film  
+- `title` : memuat judul film
+- `genres` : memuat genre film
+
+Pada file `ratings.csv` berisi daftar ratings atau penilaian terhadap satu film yang memiliki 25.000.095 records data dan 4 feature:
+
+- `userId` : memuat nomor ID users
+- `movieId` : memuat nomor ID film  
+- `rating` : memuat rating atau penilaian films dalam skala bintang, dengan peningkatan setengah bintang dalam rentang 0,5 - 5 bintang
+- `timestamp` : memuat kode timestamp
+
+Pada file `tags.csv` berisi daftar tags pada film yang diberikan users yang memiliki 1.093.360 records data dan 4 feature:
+
+- `userId` : memuat nomor ID users
+- `movieId` : memuat nomor ID film  
+- `tag` : memuat tag film
+- `timestamp` : memuat kode timestamp
+
+Pada file `links.csv` berisi daftar links film yang mengarah ke laman website films memiliki 62.423 records data dan 3 feature: 
+
+- `movieId` : memuat nomor ID film yang merujuk pada website MovieLens
+- `imdbId` : memuat nomor ID film yang merujuk pada website IMDb
+- `tmdbId` : memuat nomor ID film yang merujuk pada website TMDB
+
 
 
 
