@@ -1,14 +1,12 @@
 # Laporan Proyek Machine Learning - Lulu Nadhiatun Anisa
 
 ## Domain Proyek
-
 Domain yang dipilih untuk proyek *machine learning* ini adalah meninjau **Rekomenadisi Film **  
 
 ## Project Overview
+![Film](https://github.com/user-attachments/assets/79169bc0-4e92-4d67-9e9d-d8c40e0462c6)
 
-![Film](https://github.com/user-attachments/assets/37ce2fed-7d9b-4604-aed0-c6caebb27c34)
-
-Di era digital, informasi yang tersedia  dan dapat diakses melalui intrent kapanpun dan dimanapun setiap harinya.
+Di era digital, informasi yang tersedia  dan dapat diakses melalui internet kapanpun dan dimanapun setiap harinya.
 Dalam dunia bisnis modern, informasi telah menjadi kebutuhan utama, dengan penggunaan basis data sebagai kunci untuk menghasilkan solusi bisnis yang inovatif. 
 Banyak company kini memanfaatkan data untuk memahami preferensi pelanggan, yang pada akhirnya mendorong perkembangan sistem rekomendasi. 
 Sistem ini menjadi alat penting untuk meningkatkan pengalaman pengguna dengan menyediakan rekomendasi yang relevan dan sesuai dengan kebutuhan mereka.[[1](https://www.antaranews.com/berita/1776245/layanan-streaming-tantangan-dan-peluang-perfilman-indonesia#google_vignette)]
@@ -28,7 +26,7 @@ peningkatan loyalisat pengguna, optimasi pendapatan dan lainnya.
 ### Problem Statements
 Berdasarkan latar belakang yang telah dijelaskan, berikut adalah rincian masalah yang dapat diatasi melalui proyek ini:
 - Bagaimana cara membuat sebuah sistem rekomendasi film yang disukai pengguna lain dapat direkomendasikan kepada pengguna lainnya juga?
-- Bagaimana hasil dan evaluasi model dalam mengembangkan sistem rekomendasi film yang sesuai dengan preferensi pengguna?
+- Bagaimana cara menyajikan sistem rekomendasi film berdasarkan ratings film tertinggi?
 
 ### Goals
 Mampu merancang dan mengembangkan sistem rekomendasi yang secara akurat menyarankan konten berdasarkan analisis mendalam terhadap 
@@ -38,25 +36,23 @@ rating yang diberikan pengguna serta aktivitas mereka di masa lalu.
 
 Solusi yang saya kembangkan menggunakan dua algoritma machine learning untuk mendukung sistem rekomendasi, yaitu:
 
-- **Content Based Filtering** adalah algoritma yang merekomendasikan item serupa dengan apa yang disukai pengguna, berdasarkan tindakan mereka sebelumnya atau umpan balik eksplisit.
-- **Collaborative Filtering**. adalah algoritma yang bergantung pada pendapat komunitas pengguna. Dia tidak memerlukan atribut untuk setiap itemnya.
-
-Algoritma Content Based Filtering digunakan untuk merekemondesikan movie berdasarkan aktivitas pengguna pada masa lalu, sedangkan algoritma Collabarative Filltering digunakan untuk merekomendasikan movie berdasarkan ratings yang paling tinggi.
-
+- **Content Based Filtering** adalah salah satu metode dalam sistem rekomendasi yang digunakan untuk memberikan rekomendasi kepada pengguna berdasarkan karakteristik atau atribut dari item yang telah mereka interaksikan atau sukai sebelumnya.
+- **Collaborative Filtering**. adalah teknik yang digunakan dalam sistem rekomendasi untuk memberikan rekomendasi berdasarkan preferensi atau interaksi pengguna lain. Pendekatan ini tidak bergantung pada atribut atau konten dari item itu sendiri (seperti dalam Content-Based Filtering).
+  
+Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berdasarkan aktivitas pengguna pada masa lalu, sedangkan algoritma *Collabarative Filltering* digunakan untuk merekomendasikan movie berdasarkan ratings yang paling tinggi.
 
 ## Data Understanding
-### EDA - Deskripsi Variabel
 **Informasi Datasets**
 
 | Jenis | Keterangan |
 | ------ | ------ |
-| Title | _Apple Quality_ |
-| Source | [Kaggle](https://www.kaggle.com/datasets/nelgiriyewithana/apple-quality/data) |
-| Maintainer | [Nidula Elgiriyewithana ⚡](https://www.kaggle.com/nelgiriyewithana) |
-| License | Other (specified in description) |
+| Title | Movie Recommendation Data |
+| Source | [Kaggle](https://www.kaggle.com/datasets/rohan4050/movie-recommendation-data) |
+| Maintainer | [Rohan Sharma⚡](https://www.kaggle.com/rohan4050) |
+| License | Unknown |
 | Visibility | Publik |
-| Tags | _Computer Science, Education, Food, Data Visualization, Classification, Exploratory Data Analysis_ |
-| Usability | 10.00 |
+| Tags | Movie and TV Show, Recommender System |
+| Usability | 7.94 |
 
 Berikut informasi pada dataset: 
 Data yang digunakan dalam pembuatan model merupakan data primer, data ini didapat dari sebuah perusahaan pertanian Amerika, yang disediakan secara publik di kaggle dengan nama datasets yaitu: _Apple Quality_
