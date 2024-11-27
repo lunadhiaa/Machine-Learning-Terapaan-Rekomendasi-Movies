@@ -97,7 +97,7 @@ Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki a
 
 - Menggabungkan data dengan featuers `movies`
 
-![5](https://github.com/user-attachments/assets/07c0ab1c-231c-4adb-8a7d-ff9e7c814d0b)
+  ![5](https://github.com/user-attachments/assets/07c0ab1c-231c-4adb-8a7d-ff9e7c814d0b)
 
 ## Data Preparation
 Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Tahapan ini mencakup berbagai langkah untuk memastikan data bersih, konsisten, relevan, dan terstruktur dengan baik.
