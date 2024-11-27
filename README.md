@@ -22,8 +22,8 @@ peningkatan loyalisat pengguna, optimasi pendapatan dan lainnya.
 
 ### Problem Statements
 Berdasarkan latar belakang yang telah dijelaskan, berikut adalah rincian masalah yang dapat diatasi melalui proyek ini:
-- Bagaimana cara membuat sistem rekomendasi film yang memungkinkan film yang disukai oleh satu pengguna dapat direkomendasikan kepada pengguna lain dengan preferensi serupa?
-- Bagaimana cara menyajikan sistem rekomendasi film berdasarkan ratings film tertinggi?
+Bagaimana cara membuat sistem rekomendasi film yang memungkinkan film yang disukai oleh satu pengguna dapat direkomendasikan kepada pengguna lain dengan preferensi serupa?
+
 
 ### Goals
 Mampu merancang dan mengembangkan sistem rekomendasi yang secara akurat menyarankan konten berdasarkan analisis mendalam terhadap 
