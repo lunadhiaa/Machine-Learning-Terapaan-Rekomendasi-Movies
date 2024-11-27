@@ -143,7 +143,22 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
    - TFIDFVetorizer()
 
      Menggunakan TF-IDF (Term Frequency-Inverse Document Frequency) untuk memproses data teks, dalam hal ini, data genre dari film yang ada dalam dataframe movie_new. TfidfVectorizer adalah alat dari pustaka    scikit-learn yang digunakan untuk mengubah teks menjadi representasi numerik berbasis TF-IDF. TF-IDF adalah teknik yang digunakan untuk menilai pentingnya kata dalam dokumen yang bersifat kolektif atau seluruh korpus.
-     
+
+     ![tf 1](https://github.com/user-attachments/assets/568c6172-610c-4568-b595-10f8635363a1)
+
+     Kemudian dapat melakukan fit dan transformasi ke dalam bentuk matirx
+
+     ![tf 2](https://github.com/user-attachments/assets/a87ae4be-e977-4e6b-8e47-5baeebeaba7c)
+
+     Menghasilkan vektor tf-idf dalam bentuk matrix, menggunakan fungsi todense().
+
+     ![tf 3](https://github.com/user-attachments/assets/9c91606a-a5a1-40f3-9277-3b2b5504cf6b)
+
+     Lihat matrix tf-idf untuk beberapa movie (movie_name) dan genre
+
+     ![tf 4](https://github.com/user-attachments/assets/22619f68-6d09-42d1-a2f2-186335aa48e7)
+
+
    - Perhitungan *cosine similarity*
 
      *Cosine Similarity* digunakan untuk menghitung derajat kesamaan (similarity degree) antar film.  *Cosine Similarity* adalah sebuah ukuran yang digunakan untuk menghitung seberapa mirip dua vektor dalam ruang vektor berdimensi tinggi, dengan menggunakan sudut antara kedua vektor tersebut. Meskipun vektor dapat memiliki panjang yang berbeda, Cosine Similarity mengukur kesamaan arah antara dua vektor, bukan panjangnya.
