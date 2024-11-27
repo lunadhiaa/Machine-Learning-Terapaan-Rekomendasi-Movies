@@ -96,7 +96,7 @@ Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki a
 ![4](https://github.com/user-attachments/assets/4ef808ef-f031-41e7-b28b-ff0a6a2e05c2)
 
 - Menggabungkan data dengan featuers `movies`
-  ![5](https://github.com/user-attachments/assets/7475e398-ed72-40e8-8bcf-402662cce922)
+![5](https://github.com/user-attachments/assets/07c0ab1c-231c-4adb-8a7d-ff9e7c814d0b)
 
 ## Data Preparation
 Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Tahapan ini mencakup berbagai langkah untuk memastikan data bersih, konsisten, relevan, dan terstruktur dengan baik.
@@ -121,6 +121,11 @@ Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang sia
 ![dicsionary](https://github.com/user-attachments/assets/8c238a35-25f1-4794-9898-3a7a50fd6bc4)
 
 ## Modeling dan Result
+Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma machine learning, yaitu content-based filtering dan collaborative filtering.
+- Pada algoritma content-based filtering, pendekatan yang digunakan didasarkan pada preferensi pengguna terhadap item yang telah mereka sukai di masa lalu.
+- Sementara itu, pada collaborative filtering, model ini memanfaatkan tingkat rating yang diberikan oleh pengguna terhadap film untuk menghasilkan rekomendasi yang relevan.
+
+
 ## Evaluation
 ## Referensi
 1. antaranews.com (2020, 10 Oktober). Layanan "streaming", tantangan dan peluang perfilman Indonesia. Diakses pada 25 November 2024, dari https://www.antaranews.com/berita/1776245/layanan-streaming-tantangan-dan-peluang-perfilman-indonesia#google_vignette
