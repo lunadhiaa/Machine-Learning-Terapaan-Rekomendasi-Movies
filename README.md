@@ -79,9 +79,11 @@ Pada file `links.csv` berisi daftar links film yang mengarah ke laman website fi
 - `tmdbId` : memuat nomor ID film yang merujuk pada website TMDB
 
 ### Exploratory Data Analysis (EDA)
+
 Proses eksplorasi data (Exploratory Data Analysis/EDA) dilakukan dengan menganalisis dataset secara mendalam untuk memperoleh pemahaman yang komprehensif mengenai karakteristik data, sehingga dapat mengungkapkan insight dan pengetahuan (knowledge).
 
 **Univariate Analysis**
+
 Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki atribut atau kolom yang relevan, untuk membentuk satu dataset yang konsisten dan utuh. Tujuan dari merging data adalah untuk mengintegrasikan informasi yang tersebar dalam berbagai sumber atau tabel sehingga dapat digunakan dalam analisis atau pemodelan. Berikut ini beberapa tahapan yang dilakukan untuk dalam tahapan merging data yang saya lakukan yaitu:
 - Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada movieId dengan menyimpanya pada variabel `movie_all`
 
@@ -133,9 +135,14 @@ Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang sia
   dicsionary](https://github.com/user-attachments/assets/8c238a35-25f1-4794-9898-3a7a50fd6bc4)
 
 ## Modeling dan Result
-Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma machine learning, yaitu content-based filtering dan collaborative filtering.
-- Pada algoritma content-based filtering, pendekatan yang digunakan didasarkan pada preferensi pengguna terhadap item yang telah mereka sukai di masa lalu.
-- Sementara itu, pada collaborative filtering, model ini memanfaatkan tingkat rating yang diberikan oleh pengguna terhadap film untuk menghasilkan rekomendasi yang relevan.
+Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma machine learning, yaitu `content-based filtering` dan `collaborative filtering`.
+- Pada algoritma `content-based filtering`, pendekatan yang digunakan didasarkan pada preferensi pengguna terhadap item yang telah mereka sukai di masa lalu.
+- Sementara itu, pada `collaborative filtering`, model ini memanfaatkan tingkat rating yang diberikan oleh pengguna terhadap film untuk menghasilkan rekomendasi yang relevan.
+
+1. Menggunakan `content-based filtering`
+*Content-Based Filtering* adalah salah satu metode dalam sistem rekomendasi yang digunakan untuk memberikan rekomendasi kepada pengguna berdasarkan karakteristik atau atribut dari item yang telah mereka interaksikan atau sukai sebelumnya. Pada proyek ini, saya akan menggunakan pendekatan content-based filtering untuk mengembangkan model yang bertujuan membangun sistem rekomendasi film sesuai dengan tujuan proyek. Proses pengembangan sistem ini dilakukan melalui beberapa tahapan, yaitu:
+ - TFIDFVetorizer()
+Menggunakan TF-IDF (Term Frequency-Inverse Document Frequency) untuk memproses data teks, dalam hal ini, data genre dari film yang ada dalam dataframe movie_new. TfidfVectorizer adalah alat dari pustaka    scikit-learn yang digunakan untuk mengubah teks menjadi representasi numerik berbasis TF-IDF. TF-IDF adalah teknik yang digunakan untuk menilai pentingnya kata dalam dokumen yang bersifat kolektif atau seluruh korpus.
 
 
 ## Evaluation
