@@ -52,39 +52,53 @@ Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berda
 | Usability | 7.94 |
 
 ### Variabel-variabel pada dataset:
-Pada file `movies.csv` berisi daftar film yang memiliki 3 feature:
+Pada file `movies.csv` berisi daftar film yang memiliki 9742 data dan 3 feature:
 
 - `movieId` : memuat nomor ID film  
 - `title` : memuat judul film
 - `genres` : memuat genre film
 
-Pada file `ratings.csv` berisi daftar ratings atau penilaian terhadap satu film yang memiliki 4 feature:
+Pada file `ratings.csv` berisi daftar ratings atau penilaian terhadap satu film yang memiliki 100836 data dan 4 feature:
 
 - `userId` : memuat nomor ID users
 - `movieId` : memuat nomor ID film  
 - `rating` : memuat rating atau penilaian films dalam skala bintang, dengan peningkatan setengah bintang dalam rentang 0,5 - 5 bintang
 - `timestamp` : memuat kode timestamp
 
-Pada file `tags.csv` berisi daftar tags pada film yang diberikan users yang memiliki 4 feature:
+Pada file `tags.csv` berisi daftar tags pada film yang diberikan users yang memiliki 3683 data dan 4 feature:
 
 - `userId` : memuat nomor ID users
 - `movieId` : memuat nomor ID film  
 - `tag` : memuat tag film
 - `timestamp` : memuat kode timestamp
 
-Pada file `links.csv` berisi daftar links film yang mengarah ke laman website films yang memiliki 3 feature: 
+Pada file `links.csv` berisi daftar links film yang mengarah ke laman website films yang memiliki 9742 dan 3 feature: 
 
 - `movieId` : memuat nomor ID film yang merujuk pada website MovieLens
 - `imdbId` : memuat nomor ID film yang merujuk pada website IMDb
 - `tmdbId` : memuat nomor ID film yang merujuk pada website TMDB
 
-## Data Preparation
+### Exploratory Data Analysis (EDA)
+Proses eksplorasi data (Exploratory Data Analysis/EDA) dilakukan dengan menganalisis dataset secara mendalam untuk memperoleh pemahaman yang komprehensif mengenai karakteristik data, sehingga dapat mengungkapkan insight dan pengetahuan (knowledge).
+**Univariate Analysis**
 Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki atribut atau kolom yang relevan, untuk membentuk satu dataset yang konsisten dan utuh. Tujuan dari merging data adalah untuk mengintegrasikan informasi yang tersebar dalam berbagai sumber atau tabel sehingga dapat digunakan dalam analisis atau pemodelan. Berikut ini beberapa tahapan yang dilakukan untuk dalam tahapan merging data yang saya lakukan yaitu:
 - Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada movieId dengan menyimpanya pada variabel `movie_all`
+![1](https://github.com/user-attachments/assets/5b19ee23-45e0-4ef6-970f-9d672432c3f7)
+
 - Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada userId dengan menyimpanya pada variabel `user_all`
+![2](https://github.com/user-attachments/assets/01988124-1995-4ff4-be25-e95d4f80ded9)
+
 - Menggabungkan beberapa file seperti `links`, `movies`, `ratings`, dan `tags` dengan menyimpannya pada variabel `movie_info`
+![3](https://github.com/user-attachments/assets/fd615154-ca95-49d3-bdba-62751fc9c079)
+
 - Menggabungkan dataframe ratings dengan `movie_info` Berdasarkan Nilai `movieId`
+![4](https://github.com/user-attachments/assets/4ef808ef-f031-41e7-b28b-ff0a6a2e05c2)
+
 - Menggabungkan data dengan featuers `movies`
+![5](https://github.com/user-attachments/assets/7475e398-ed72-40e8-8bcf-402662cce922)
+
+## Data Preparation
+
 
 Setelah selesai melakukan Merging data, dapat melanjutkannya dengan melakukan beberapa tahapan sebagai berikut yaitu : 
 - Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak, jika ada data kosong maka saya akan.menghapusnya
