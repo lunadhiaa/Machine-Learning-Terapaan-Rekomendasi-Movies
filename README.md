@@ -207,6 +207,19 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
    *Collaborative Filtering* adalah teknik yang digunakan dalam sistem rekomendasi untuk memberikan rekomendasi berdasarkan preferensi atau interaksi pengguna lain. Pendekatan ini tidak bergantung pada atribut atau konten dari item itu sendiri (seperti dalam Content-Based Filtering).
 
    - Preparation
+
+     Proses encoding dilakukan pada tahap ini, dengan melakukan encode pada feature 'userId' dan 'movieId'. proses encode akan memetakan setiap nilai pada kedua feature tersebut ke dalam bentuk index.
+     ![preperetion 1](https://github.com/user-attachments/assets/4d619a26-01ea-466f-8601-36857c94719f)
+
+     ![preperetion 2](https://github.com/user-attachments/assets/2cb839b7-be08-407b-88a9-7dace07497e4)
+
+     Terakhir, periksa beberapa informasi dalam data seperti total pengguna, total film, ubah nilai rating menjadi tipe data float, serta cek nilai minimum dan maksimum.
+
+     ![preperetion 3](https://github.com/user-attachments/assets/2a4ce92a-2bc4-443d-8dbf-ce184a96386f)
+
+
+
+
    - Training dan Validasi Data
    - RecommenderNet
    - Rekomendasi Testing
