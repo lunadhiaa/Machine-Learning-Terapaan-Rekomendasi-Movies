@@ -217,11 +217,26 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
      ![preperetion 3](https://github.com/user-attachments/assets/2a4ce92a-2bc4-443d-8dbf-ce184a96386f)
 
+   - Split Data for Training and Validation
 
+     Data dibagi untuk data train dan validasi dengan komposisi 80/20. Pembagian ini bertujuan agar data yang digunakan dapat digunakan untuk mengembangkan model dan mengevaluasi performance dari model yang telah dikembangkan.
 
+     ![train 1](https://github.com/user-attachments/assets/6ae5ad3a-b1b8-46a1-8ac1-f6dc5863bb72)
 
-   - Training dan Validasi Data
    - RecommenderNet
+
+     ![recommennet](https://github.com/user-attachments/assets/89ac9a2f-dd2f-4c97-9c0a-f921497560f2)
+
+
+   - Training
+
+     Proses training dilakukan dengan mengimplementasikan teknik embedding untuk menghitung skor kecocokan antara film dengan users. kemudian, pada  proses compile dilakukan menggunakan BinaryCrossentropy untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, dan root mean squared error (RMSE) sebagai metrics evaluation. Proses training model berjalan sebanyak 100 epochs sebagai berikut.
+
+     ![traing 2](https://github.com/user-attachments/assets/0603faac-876e-4597-8443-be9c2aac5880)
+
+     ![training 3](https://github.com/user-attachments/assets/f4ddcd89-3d73-40c3-b9de-6213979d8a65)
+
+
    - Rekomendasi Testing
 
    
