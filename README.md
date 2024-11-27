@@ -148,7 +148,13 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
      *Cosine Similarity* digunakan untuk menghitung derajat kesamaan (similarity degree) antar film.  *Cosine Similarity* adalah sebuah ukuran yang digunakan untuk menghitung seberapa mirip dua vektor dalam ruang vektor berdimensi tinggi, dengan menggunakan sudut antara kedua vektor tersebut. Meskipun vektor dapat memiliki panjang yang berbeda, Cosine Similarity mengukur kesamaan arah antara dua vektor, bukan panjangnya.
 
-   - Rekomendasi Testing
+     ![cos 1](https://github.com/user-attachments/assets/891d83ca-4676-4342-8b0f-28145272248b)
+  
+     Membuat dataframe dari variabel cosine_sim_df dengan baris dan kolom berupa nama movie, serta melihat kesamaan matrix dari setiap movie
+
+     ![cos 2](https://github.com/user-attachments/assets/4e322cf3-bace-41ef-b189-48c60f8827bf)
+
+ - Rekomendasi Testing
 
       Membuat fungsi movie_recommendations dengan beberapa parameter sebagai berikut:
      - Nama_movie : Nama judul dari movie tersebut (index kemiripan dataframe).
