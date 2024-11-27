@@ -206,9 +206,12 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
    *Collaborative Filtering* adalah teknik yang digunakan dalam sistem rekomendasi untuk memberikan rekomendasi berdasarkan preferensi atau interaksi pengguna lain. Pendekatan ini tidak bergantung pada atribut atau konten dari item itu sendiri (seperti dalam Content-Based Filtering).
 
-   - TFIDFVetorizer()
+   - Preparation
+   - Training dan Validasi Data
+   - RecommenderNet
+   - Rekomendasi Testing
 
-     Menggunakan TF-IDF (Term Frequency-Inverse Document Frequency) untuk memproses data teks, dalam hal ini, data genre dari film yang ada dalam dataframe movie_new. TfidfVectorizer adalah alat dari pustaka    scikit-learn yang digunakan untuk mengubah teks menjadi representasi numerik berbasis TF-IDF. TF-IDF adalah teknik yang digunakan untuk menilai pentingnya kata dalam dokumen yang bersifat kolektif atau seluruh korpus.
+   
 
 
 
