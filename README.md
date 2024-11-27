@@ -154,10 +154,6 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
      ![tf 3](https://github.com/user-attachments/assets/9c91606a-a5a1-40f3-9277-3b2b5504cf6b)
 
-     Lihat matrix tf-idf untuk beberapa movie (movie_name) dan genre
-
-     ![tf 4](https://github.com/user-attachments/assets/22619f68-6d09-42d1-a2f2-186335aa48e7)
-
 
    - Perhitungan *cosine similarity*
 
