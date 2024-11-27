@@ -154,23 +154,23 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
      ![cos 2](https://github.com/user-attachments/assets/4e322cf3-bace-41ef-b189-48c60f8827bf)
 
- - Rekomendasi Testing
+    - Rekomendasi Testing
 
       Membuat fungsi movie_recommendations dengan beberapa parameter sebagai berikut:
-     - Nama_movie : Nama judul dari movie tersebut (index kemiripan dataframe).
-     - Similarity_data : Dataframe mengenai similarity yang telah kita didefinisikan sebelumnya
-     - Items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah ‘movie_name’ dan ‘genre’.
-     - k : Banyak rekomendasi yang ingin diberikan. 
+      - Nama_movie : Nama judul dari movie tersebut (index kemiripan dataframe).
+      - Similarity_data : Dataframe mengenai similarity yang telah kita didefinisikan sebelumnya
+      - Items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah ‘movie_name’ dan ‘genre’.
+      - k : Banyak rekomendasi yang ingin diberikan.
+      
+      ![recom 1](https://github.com/user-attachments/assets/6b4b0963-c368-44c7-9edd-1bcd74401123)
 
-     ![recom 1](https://github.com/user-attachments/assets/6b4b0963-c368-44c7-9edd-1bcd74401123)
-  
-     Setelah membuat fungsi untuk melakukan rekomendasi film, dapat menerapkan kode di atas untuk menemukan rekomendasi movie yang mirip dengan `Juno (2007)`.
+      Setelah membuat fungsi untuk melakukan rekomendasi film, dapat menerapkan kode di atas untuk menemukan rekomendasi movie yang mirip dengan `Juno (2007)`.
 
-     ![recom 2](https://github.com/user-attachments/assets/921bde32-5af3-4f62-b80a-6a509a5a9e17)
-  
-      Berikut ini merupakan Top 5 Recommendations berdasarkan genre dari film `Juno (2007)`. Sistem telah berhasil merekomendasikan film dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi film yang mirip dengan genre Comedy, Drama, Romance.. 
+      ![recom 2](https://github.com/user-attachments/assets/921bde32-5af3-4f62-b80a-6a509a5a9e17)
 
-     ![recom 3](https://github.com/user-attachments/assets/e97af899-6429-46ce-ad61-9f72184b3938)
+      Berikut ini merupakan Top 5 Recommendations berdasarkan genre dari film `Juno (2007)`. Sistem telah berhasil merekomendasikan film dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi film yang mirip dengan genre Comedy, Drama, Romance..
+
+      ![recom 3](https://github.com/user-attachments/assets/e97af899-6429-46ce-ad61-9f72184b3938)
 
 
 ## Evaluation
