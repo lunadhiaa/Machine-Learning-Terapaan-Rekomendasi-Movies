@@ -144,14 +144,7 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
      ![tf 1](https://github.com/user-attachments/assets/568c6172-610c-4568-b595-10f8635363a1)
 
-     Kemudian dapat melakukan fit dan transformasi ke dalam bentuk matirx
-
-     ![tf 2](https://github.com/user-attachments/assets/a87ae4be-e977-4e6b-8e47-5baeebeaba7c)
-
-     Menghasilkan vektor tf-idf dalam bentuk matrix, menggunakan fungsi todense().
-
-     ![tf 3](https://github.com/user-attachments/assets/9c91606a-a5a1-40f3-9277-3b2b5504cf6b)
-
+     ![tf 5](https://github.com/user-attachments/assets/eb7a0edd-5079-401a-8f45-b3d8331b8f62)
 
    - Perhitungan *cosine similarity*
 
