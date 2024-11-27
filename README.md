@@ -260,15 +260,15 @@ Evaluasi dilakukan untuk mengukur sejauh mana performance atau kinerja dari mode
 
 1. `content-based filtering`
 
-    Teknik Evaluasi di atas adalah dengan menggunakan precission, rumus dari teknik ini adalah :
+    Teknik Evaluasi yang digunakan untuk content-based filtering adalah dengan menggunakan precission, rumus dari teknik ini :
 
    ![rumusPrecission](<https://raw.githubusercontent.com/onedayxzn/submission_file/master/dos_819311f78d87da1e0fd8660171fa58e620211012160253%20(1).png>)
 
-   Hasil dari Top-N 5 dari film atau movie yang saya rekomendasikan adalah sebagai berikut :
+   Hasil dari Top-N 5 dari film yang saya rekomendasikan adalah sebagai berikut :
 
    ![recom 3](https://github.com/user-attachments/assets/e97af899-6429-46ce-ad61-9f72184b3938)
 
-   Dari hasil rekomendasi di atas, diketahui bahwa Juno (2007) termasuk ke dalam genre Comedy, Drama, Romance. Dari 5 item yang direkomendasikan, 3 item memiliki genre Comedy, Drama, Romance (similar). Artinya, precision sistem kita sebesar 5/5 atau 100%.
+   Dari hasil rekomendasi di atas, diketahui bahwa Juno (2007) termasuk ke dalam genre Comedy| Drama| Romance. Dari 5 item yang direkomendasikan, 3 item memiliki genre Comedy| Drama| Romance (similar). Artinya, precision sistem kita sebesar 5/5 atau 100%.
    
 2. `content-based filtering`
 
@@ -291,6 +291,9 @@ Evaluasi dilakukan untuk mengukur sejauh mana performance atau kinerja dari mode
 
      Model menunjukkan performa yang baik pada data pelatihan, namun pada data uji, performa tidak mengalami peningkatan signifikan setelah epoch tertentu, dengan model mencapai konvergensi pada sekitar epoch ke-100. Dari proses pelatihan ini, diperoleh nilai error akhir sekitar 0,19 untuk data pelatihan dan sekitar 0,20 untuk data validasi.
 
+## Conclusion
+
+Di sini, saya telah berhasil mengembangkan model sistem rekomendasi film dengan menggunakan dua teknik yang berbeda, yaitu Content-Based Filtering dan Collaborative Filtering. Hasil rekomendasi yang diperoleh cukup memuaskan. Metode Collaborative Filtering mampu memberikan rekomendasi yang relevan berdasarkan preferensi pengguna lain, sementara metode Content-Based Filtering berhasil menyarankan film yang serupa dengan film yang memiliki kesamaan genre. Kedua metode ini menunjukkan kinerja yang baik dalam memberikan rekomendasi yang sesuai dengan preferensi pengguna.
 
 ## Referensi
 1. antaranews.com (2020, 10 Oktober). Layanan "streaming", tantangan dan peluang perfilman Indonesia. Diakses pada 25 November 2024, dari https://www.antaranews.com/berita/1776245/layanan-streaming-tantangan-dan-peluang-perfilman-indonesia#google_vignette
