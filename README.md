@@ -116,8 +116,6 @@ Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang sia
 
   ![cleaning](https://github.com/user-attachments/assets/93d53dc3-0831-416c-94a3-6abf9b6b6cdc)
 
-  ![clening 2](https://github.com/user-attachments/assets/6f8408fe-5da4-4bd9-a32a-d05295b1bdaa)
-
 - Mengurutan data : untuk mengurutkan data berdasarkan movieId secara asceding.
 
   ![assending](https://github.com/user-attachments/assets/2fd07bca-4e3f-4c8f-8bcc-0dc1cab0fc1a)
