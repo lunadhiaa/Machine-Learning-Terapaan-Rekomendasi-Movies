@@ -96,6 +96,7 @@ Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki a
 ![4](https://github.com/user-attachments/assets/4ef808ef-f031-41e7-b28b-ff0a6a2e05c2)
 
 - Menggabungkan data dengan featuers `movies`
+
 ![5](https://github.com/user-attachments/assets/07c0ab1c-231c-4adb-8a7d-ff9e7c814d0b)
 
 ## Data Preparation
