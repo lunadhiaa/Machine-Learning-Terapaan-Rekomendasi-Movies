@@ -183,7 +183,7 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
       ![recom 2](https://github.com/user-attachments/assets/921bde32-5af3-4f62-b80a-6a509a5a9e17)
 
-      Berikut ini merupakan Top 5 Recommendations berdasarkan genre dari film `Juno (2007)`. Sistem telah berhasil merekomendasikan film dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi film yang mirip dengan genre Comedy, Drama, Romance..
+      Berikut ini merupakan Top 5 Recommendations berdasarkan genre dari film `Juno (2007)`. Sistem telah berhasil merekomendasikan film dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi film yang mirip dengan genre Comedy, Drama, Romance.
 
       ![recom 3](https://github.com/user-attachments/assets/e97af899-6429-46ce-ad61-9f72184b3938)
 
@@ -239,12 +239,59 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
    - Rekomendasi Testing
 
-   
+     Kemudian menggunakan model.predict(), sistem akan memberikan rekomendasi sebagai berikut.
 
+     ![rek 1](https://github.com/user-attachments/assets/e575a6e1-776a-4a67-936e-5b2ed77956c1)
 
+     ![rek 2](https://github.com/user-attachments/assets/bf081449-6995-403b-9d92-43af0b24b617)
 
+     Dari hasil di atas movie yang bergenre Comedy Romance menjadi movie yang paling tinggi ratingsnya. Kemudian top 10 movie yang direkomendasikan sistem adalah movie dengan genre Drama, Romance, dan Comedy.
+
+   Kelebihan Collaborative Filtering
+
+   - Dapat memberikan rekomendasi berdasarkan preferensi komunitas atau pengguna lain
+
+   Kekurangan Collaborative Filtering
+
+   - Membutuhkan banyak users atau pengguna
 
 ## Evaluation
+Evaluasi dilakukan untuk mengukur sejauh mana performance atau kinerja dari model sistem rekomendasi. Pada proyek ini, evaluasi diukur menggunakan metriks evaluasi sesuai dengan pendekatan yang dipakai dalam pengembangan sistem rekomendasi.
+
+1. `content-based filtering`
+
+    Teknik Evaluasi di atas adalah dengan menggunakan precission, rumus dari teknik ini adalah :
+
+   ![rumusPrecission](<https://raw.githubusercontent.com/onedayxzn/submission_file/master/dos_819311f78d87da1e0fd8660171fa58e620211012160253%20(1).png>)
+
+   Hasil dari Top-N 5 dari film atau movie yang saya rekomendasikan adalah sebagai berikut :
+
+   ![recom 3](https://github.com/user-attachments/assets/e97af899-6429-46ce-ad61-9f72184b3938)
+
+   Dari hasil rekomendasi di atas, diketahui bahwa Juno (2007) termasuk ke dalam genre Comedy, Drama, Romance. Dari 5 item yang direkomendasikan, 3 item memiliki genre Comedy, Drama, Romance (similar). Artinya, precision sistem kita sebesar 5/5 atau 100%.
+   
+2. `content-based filtering`
+
+   Evaluasi metrik yang digunakan untuk mengukur kinerja model adalah metrik RMSE (Root Mean Squared Error).
+
+   - RMSE adalah metode pengukuran dengan mengukur perbedaan nilai dari prediksi sebuah model sebagai estimasi atas nilai yang diobservasi. Root Mean Square Error adalah hasil dari akar kuadrat Mean Square Error. Keakuratan metode estimasi kesalahan pengukuran ditandai dengan adanya nilai RMSE yang kecil. Metode estimasi yang mempunyai Root Mean Square Error (RMSE) lebih kecil dikatakan lebih akurat daripada metode estimasi yang mempunyai Root Mean Square Error (RMSE) lebih besar
+     
+   - Formula dari matriks RMSE yang akan digunakan adalah sebagai berikut :
+
+     ![formula matriks RMSE](https://raw.githubusercontent.com/onedayxzn/submission_file/master/rumusRMSE.png)
+
+     keterangan : <br>
+     At : Nilai Aktual. <br>
+     ft = Nilai hasil peramalan.<br>
+     N = banyaknya dataset<br>
+
+   - Hasil dari model evaluasi visualisasi matriks adalah sebagai berikut :
+
+     ![visualisasi](https://github.com/user-attachments/assets/f6e69e68-fd13-4796-b274-5c84b5adb1ad)
+
+     Model menunjukkan performa yang baik pada data pelatihan, namun pada data uji, performa tidak mengalami peningkatan signifikan setelah epoch tertentu, dengan model mencapai konvergensi pada sekitar epoch ke-100. Dari proses pelatihan ini, diperoleh nilai error akhir sekitar 0,19 untuk data pelatihan dan sekitar 0,20 untuk data validasi.
+
+
 ## Referensi
 1. antaranews.com (2020, 10 Oktober). Layanan "streaming", tantangan dan peluang perfilman Indonesia. Diakses pada 25 November 2024, dari https://www.antaranews.com/berita/1776245/layanan-streaming-tantangan-dan-peluang-perfilman-indonesia#google_vignette
 2. kumparan.com. (2021, 31 Agustus). Mengenal Istilah Binge Watching dan Hopping yang Jadi Tren Terbaru Nonton Film. Diakses pada 25 November 2024, dari https://kumparan.com/millennial/mengenal-istilah-binge-watching-dan-hopping-yang-jadi-tren-terbaru-nonton-film-1wREvjSoXeB
