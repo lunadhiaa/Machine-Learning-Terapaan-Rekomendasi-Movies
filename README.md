@@ -80,6 +80,7 @@ Pada file `links.csv` berisi daftar links film yang mengarah ke laman website fi
 
 ### Exploratory Data Analysis (EDA)
 Proses eksplorasi data (Exploratory Data Analysis/EDA) dilakukan dengan menganalisis dataset secara mendalam untuk memperoleh pemahaman yang komprehensif mengenai karakteristik data, sehingga dapat mengungkapkan insight dan pengetahuan (knowledge).
+
 **Univariate Analysis**
 Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki atribut atau kolom yang relevan, untuk membentuk satu dataset yang konsisten dan utuh. Tujuan dari merging data adalah untuk mengintegrasikan informasi yang tersebar dalam berbagai sumber atau tabel sehingga dapat digunakan dalam analisis atau pemodelan. Berikut ini beberapa tahapan yang dilakukan untuk dalam tahapan merging data yang saya lakukan yaitu:
 - Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada movieId dengan menyimpanya pada variabel `movie_all`
@@ -106,12 +107,28 @@ Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki a
 
 Setelah selesai melakukan Merging data, dapat melanjutkannya dengan melakukan beberapa tahapan sebagai berikut yaitu : 
 - Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak, jika ada data kosong maka saya akan.menghapusnya
-- Menggabungkan variabel : untuk menggabungkan beberapa variabel berdasarkan id yang sifatnya unik (berbeda dari yang lain).
+![missing](https://github.com/user-attachments/assets/cdb1d148-03a1-4e3f-80b6-96a695bff3f6)
+
+- Data Cleaning : proses identifikasi, perbaikan, atau penghapusan data yang tidak lengkap, tidak akurat, tidak konsisten, atau tidak relevan dalam dataset.
+![cleaning](https://github.com/user-attachments/assets/93d53dc3-0831-416c-94a3-6abf9b6b6cdc)
+
+![clening 2](https://github.com/user-attachments/assets/6f8408fe-5da4-4bd9-a32a-d05295b1bdaa)
+
+- Menggabungkan variabel : untuk menggabungkan beberapa variabel berdasarkan id yang sifatnya unik berbeda dari yang lain.
+
 - Mengurutan data : untuk mengurutkan data berdasarkan movieId secara asceding.
+![assending](https://github.com/user-attachments/assets/2fd07bca-4e3f-4c8f-8bcc-0dc1cab0fc1a)
+
 - Mengatasi duplikasi data : untuk mengatasi data yang nilai atau isinya sama.
+![duplicates](https://github.com/user-attachments/assets/07dc83e3-01d2-4ced-bc78-dfadfd57e1a3)
+
 - Konversi data menjadi list : untuk mengubah data menjadi list
+![konversidata](https://github.com/user-attachments/assets/9e83ec7a-7926-4222-a0e9-5f3456d6958a)
+
 - Membuat dictionary : Untuk membuat dictionary dari data yang ada.
-- Mapping data : untuk memetakan data
+![dicsionary](https://github.com/user-attachments/assets/8c238a35-25f1-4794-9898-3a7a50fd6bc4)
+
+
   
 ## Modeling dan Result
 ## Evaluation
