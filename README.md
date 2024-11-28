@@ -52,27 +52,27 @@ Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berda
 | Usability | 7.94 |
 
 ### Variabel-variabel pada dataset:
-Pada file `movies.csv` berisi daftar film yang memiliki 9742 data dan 3 feature:
+Pada file `movies.csv` berisi daftar film yang memiliki 9742 baris data dan 3 kolom:
 
 - `movieId` : memuat nomor ID film  
 - `title` : memuat judul film
 - `genres` : memuat genre film
 
-Pada file `ratings.csv` berisi daftar ratings atau penilaian terhadap satu film yang memiliki 100836 data dan 4 feature:
+Pada file `ratings.csv` berisi daftar ratings atau penilaian terhadap satu film yang memiliki 100836 baris data dan 4 kolom:
 
 - `userId` : memuat nomor ID users
 - `movieId` : memuat nomor ID film  
 - `rating` : memuat rating atau penilaian films dalam skala bintang, dengan peningkatan setengah bintang dalam rentang 0,5 - 5 bintang
 - `timestamp` : memuat kode timestamp
 
-Pada file `tags.csv` berisi daftar tags pada film yang diberikan users yang memiliki 3683 data dan 4 feature:
+Pada file `tags.csv` berisi daftar tags pada film yang diberikan users yang memiliki 3683 baris data dan 4 kolom:
 
 - `userId` : memuat nomor ID users
 - `movieId` : memuat nomor ID film  
 - `tag` : memuat tag film
 - `timestamp` : memuat kode timestamp
 
-Pada file `links.csv` berisi daftar links film yang mengarah ke laman website films yang memiliki 9742 dan 3 feature: 
+Pada file `links.csv` berisi daftar links film yang mengarah ke laman website films yang memiliki 9742 baris data dan 3 kolom: 
 
 - `movieId` : memuat nomor ID film yang merujuk pada website MovieLens
 - `imdbId` : memuat nomor ID film yang merujuk pada website IMDb
@@ -80,11 +80,12 @@ Pada file `links.csv` berisi daftar links film yang mengarah ke laman website fi
 
 ### Exploratory Data Analysis (EDA)
 
-Proses eksplorasi data (Exploratory Data Analysis/EDA) dilakukan dengan menganalisis dataset secara mendalam untuk memperoleh pemahaman yang komprehensif mengenai karakteristik data, sehingga dapat mengungkapkan insight dan pengetahuan (knowledge).
+Pada tahap ini, data yang akan diolah dapat dikenali melalui proses exploratory data analysis (EDA), yaitu dengan menganalisis hubungan antar variabel berdasarkan id. Selain itu, seluruh variabel pada movie_all akan digabungkan berdasarkan movieId, dan variabel pada user_all akan digabungkan berdasarkan userId.
 
 **Univariate Analysis**
 
-Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki atribut atau kolom yang relevan, untuk membentuk satu dataset yang konsisten dan utuh. Tujuan dari merging data adalah untuk mengintegrasikan informasi yang tersebar dalam berbagai sumber atau tabel sehingga dapat digunakan dalam analisis atau pemodelan. Berikut ini beberapa tahapan yang dilakukan untuk dalam tahapan merging data yang saya lakukan yaitu:
+Berdasarkan informasi sebelumnya, terdapat 4 data .csv yang akan dikelompokkan menjadi 2 data dengan kategori utama berdasarkan jenis ID-nya, yaitu data films dan data users. Selanjutnya, saya akan mengecek jumlah data pada masing-masing kategori.
+
 - Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada movieId dengan menyimpanya pada variabel `movie_all`
 
   ![1](https://github.com/user-attachments/assets/5b19ee23-45e0-4ef6-970f-9d672432c3f7)
@@ -93,17 +94,7 @@ Merging Data adalah proses menggabungkan dua atau lebih set data yang memiliki a
 
   ![2](https://github.com/user-attachments/assets/01988124-1995-4ff4-be25-e95d4f80ded9)
 
-- Menggabungkan beberapa file seperti `links`, `movies`, `ratings`, dan `tags` dengan menyimpannya pada variabel `movie_info`
-
-  ![3](https://github.com/user-attachments/assets/fd615154-ca95-49d3-bdba-62751fc9c079)
-
-- Menggabungkan dataframe ratings dengan `movie_info` Berdasarkan Nilai `movieId
-
-  ![4](https://github.com/user-attachments/assets/4ef808ef-f031-41e7-b28b-ff0a6a2e05c2)
-
-- Menggabungkan data dengan featuers `movies`
-
-  ![5](https://github.com/user-attachments/assets/07c0ab1c-231c-4adb-8a7d-ff9e7c814d0b)
+Berdasarkan kedua informasi tersebut, terdapat 9.742 data unik untuk kategori films dan 610 data unik untuk kategori users. Berdasarkan jumlah data yang tersedia, saya memutuskan untuk menggunakan data films dan users dalam analisis ini.
 
 ## Data Preparation
 Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Tahapan ini mencakup berbagai langkah untuk memastikan data bersih, konsisten, relevan, dan terstruktur dengan baik.
