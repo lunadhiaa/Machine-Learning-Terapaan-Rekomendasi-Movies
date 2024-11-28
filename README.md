@@ -126,7 +126,7 @@ Setelah melakukan Exploratory Data Analysis/EDA, Tahap selanjutnya dapat melihat
 ## Data Preparation
 Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Data preparation yang digunakan oleh saya yaitu :
 
-1. Prepraration `content-based filtering`
+1. Preparation `content-based filtering`
 
     - Konversi data menjadi list : untuk mengubah data menjadi list
 
@@ -144,7 +144,7 @@ Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang sia
 
       ![tf 5](https://github.com/user-attachments/assets/eb7a0edd-5079-401a-8f45-b3d8331b8f62)
 
-2. Prepraration `collaborative filtering`
+2. Preparation `collaborative filtering`
 
     - Proses encoding data : melakukan konversi data
 
@@ -181,7 +181,7 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
      ![cos 2](https://github.com/user-attachments/assets/4e322cf3-bace-41ef-b189-48c60f8827bf)
 
-    - Rekomendasi Testing
+    - Hasil Rekomendasi Rekomendasi
 
       Membuat fungsi movie_recommendations dengan beberapa parameter sebagai berikut:
       - Nama_movie : Nama judul dari movie tersebut (index kemiripan dataframe).
@@ -219,9 +219,11 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
    - RecommenderNet
 
+     RecommenderNet adalah arsitektur jaringan neural yang digunakan untuk membangun sistem rekomendasi, terutama berbasis pembelajaran mendalam (Deep Learning). Sistem ini umumnya digunakan untuk merekomendasikan item kepada pengguna, seperti produk, film, buku, atau lagu, dengan memanfaatkan data historis berupa interaksi antara pengguna dan item.
+
      ![recommennet](https://github.com/user-attachments/assets/89ac9a2f-dd2f-4c97-9c0a-f921497560f2)
 
-   - Rekomendasi Testing
+   - Hasil Rekomendasi 
 
      Kemudian menggunakan model.predict(), sistem akan memberikan rekomendasi sebagai berikut.
 
