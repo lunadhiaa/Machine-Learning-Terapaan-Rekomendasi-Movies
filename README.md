@@ -219,7 +219,7 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
    - RecommenderNet
 
-     RecommenderNet adalah arsitektur jaringan neural yang digunakan untuk membangun sistem rekomendasi, terutama berbasis pembelajaran mendalam (Deep Learning). Sistem ini umumnya digunakan untuk merekomendasikan item kepada pengguna, seperti produk, film, buku, atau lagu, dengan memanfaatkan data historis berupa interaksi antara pengguna dan item.
+     RecommenderNet adalah arsitektur jaringan neural yang digunakan untuk membangun sistem rekomendasi, terutama berbasis pembelajaran mendalam (Deep Learning). Sistem ini umumnya digunakan untuk merekomendasikan film dengan memanfaatkan data historis berupa interaksi antara pengguna dan item.
 
      ![recommennet](https://github.com/user-attachments/assets/89ac9a2f-dd2f-4c97-9c0a-f921497560f2)
 
