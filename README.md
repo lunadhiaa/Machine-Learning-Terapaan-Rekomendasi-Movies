@@ -40,7 +40,7 @@ Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berda
 
 ## Data Understanding
 
-Dataset yang digunakan pada proyek machine learning ini adalah data Movie Recommendation Data yang didapat dari situs kaggle. Berikut ini informasi terkait datset yang saya gunakan yaitu :
+Dataset yang digunakan pada proyek machine learning ini adalah data Movie Recommendation Data yang didapat dari situs kaggle. Dataset terdiri dari beberapa file yaitu `movies.csv`, `ratings.csv`, `links.csv`, dan `tags.csv`. Berikut ini informasi terkait datset yang saya gunakan yaitu :
 
 **Informasi Datasets**
 
