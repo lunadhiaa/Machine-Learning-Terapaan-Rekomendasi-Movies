@@ -99,8 +99,24 @@ Pada tahap ini, data yang akan diolah dapat dikenali melalui proses exploratory 
 
 Berdasarkan kedua informasi tersebut, terdapat 9.742 data unik untuk kategori films dan 610 data unik untuk kategori users. Berdasarkan jumlah data yang tersedia, saya memutuskan untuk menggunakan data films dan users dalam analisis ini.
 
+Setelah melakukan Exploratory Data Analysis/EDA, Tahap selanjutnya dapat melihat kondisi data yang akan digunakan berikut ini kondisi datanya yaitu : 
+
+- Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak  
+
+  ![missing](https://github.com/user-attachments/assets/cdb1d148-03a1-4e3f-80b6-96a695bff3f6)
+
+- Data Cleaning : proses identifikasi, perbaikan, atau penghapusan data yang tidak lengkap, tidak akurat, tidak konsisten, atau tidak relevan dalam dataset.
+
+  ![cleaning](https://github.com/user-attachments/assets/93d53dc3-0831-416c-94a3-6abf9b6b6cdc)
+
+- Mengatasi duplikasi data : mengatasi data yang muncul lebih dari satu kali dalam sebuah dataset, baik secara keseluruhan maupun sebagian
+
+  ![duplicates](https://github.com/user-attachments/assets/07dc83e3-01d2-4ced-bc78-dfadfd57e1a3)
+
+
+
 ## Data Preparation
-Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Tahapan ini mencakup berbagai langkah untuk memastikan data bersih, konsisten, relevan, dan terstruktur dengan baik.
+Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Tahapan ini mencakup berbagai langkah untuk memastikan data bersih, konsisten, relevan, dan terstruktur dengan baik. Data preparation yang digunakan oleh saya yaitu :
 
 - Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak  
 
