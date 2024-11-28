@@ -39,6 +39,9 @@ Solusi yang saya kembangkan menggunakan dua algoritma machine learning untuk men
 Algoritma *Content Based Filtering* digunakan untuk merekemondesikan movie berdasarkan aktivitas pengguna pada masa lalu, sedangkan algoritma *Collabarative Filltering* digunakan untuk merekomendasikan movie berdasarkan ratings yang paling tinggi.
 
 ## Data Understanding
+
+Dataset yang digunakan pada proyek machine learning ini adalah data Movie Recommendation Data yang didapat dari situs kaggle. Berikut ini informasi terkait datset yang saya gunakan yaitu :
+
 **Informasi Datasets**
 
 | Jenis | Keterangan |
@@ -80,17 +83,17 @@ Pada file `links.csv` berisi daftar links film yang mengarah ke laman website fi
 
 ### Exploratory Data Analysis (EDA)
 
-Pada tahap ini, data yang akan diolah dapat dikenali melalui proses exploratory data analysis (EDA), yaitu dengan menganalisis hubungan antar variabel berdasarkan id. Selain itu, seluruh variabel pada movie_all akan digabungkan berdasarkan movieId, dan variabel pada user_all akan digabungkan berdasarkan userId.
+Proses eksplorasi data (Exploratory Data Analysis/EDA) dilakukan dengan menganalisis dataset secara mendalam untuk memperoleh pemahaman yang komprehensif mengenai karakteristik data, sehingga dapat mengungkapkan insight dan pengetahuan (knowledge).
 
 **Univariate Analysis**
 
-Berdasarkan informasi sebelumnya, terdapat 4 data .csv yang akan dikelompokkan menjadi 2 data dengan kategori utama berdasarkan jenis ID-nya, yaitu data films dan data users. Selanjutnya, saya akan mengecek jumlah data pada masing-masing kategori.
+Pada tahap ini, data yang akan diolah dapat dikenali melalui proses exploratory data analysis (EDA), yaitu dengan menganalisis hubungan antar variabel berdasarkan id. Selain itu, seluruh variabel pada movie_all akan digabungkan berdasarkan movieId, dan variabel pada user_all akan digabungkan berdasarkan userId. Berdasarkan informasi sebelumnya, terdapat 4 data .csv yang akan dikelompokkan menjadi 2 data dengan kategori utama berdasarkan jenis ID-nya, yaitu data films dan data users. Selanjutnya, saya akan mengecek jumlah data pada masing-masing kategori.
 
-- Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada movieId dengan menyimpanya pada variabel `movie_all`
+- Films
 
   ![1](https://github.com/user-attachments/assets/5b19ee23-45e0-4ef6-970f-9d672432c3f7)
 
-- Menggabungkan beberapa file dengan fungsi `np.concatenate` berdasarkan pada userId dengan menyimpanya pada variabel `user_all`
+- User Ratings
 
   ![2](https://github.com/user-attachments/assets/01988124-1995-4ff4-be25-e95d4f80ded9)
 
