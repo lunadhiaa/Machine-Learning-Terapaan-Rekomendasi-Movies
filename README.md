@@ -99,32 +99,20 @@ Pada tahap ini, data yang akan diolah dapat dikenali melalui proses exploratory 
 
 Berdasarkan kedua informasi tersebut, terdapat 9.742 data unik untuk kategori films dan 610 data unik untuk kategori users. Berdasarkan jumlah data yang tersedia, saya memutuskan untuk menggunakan data films dan users dalam analisis ini.
 
+### Pengecekan Kondisi data (Data Preprocessing)
 Setelah melakukan Exploratory Data Analysis/EDA, Tahap selanjutnya dapat melihat kondisi data yang akan digunakan berikut ini kondisi datanya yaitu : 
 
 - Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak  
 
   ![missing](https://github.com/user-attachments/assets/cdb1d148-03a1-4e3f-80b6-96a695bff3f6)
 
-- Data Cleaning : proses identifikasi, perbaikan, atau penghapusan data yang tidak lengkap, tidak akurat, tidak konsisten, atau tidak relevan dalam dataset.
-
-  ![cleaning](https://github.com/user-attachments/assets/93d53dc3-0831-416c-94a3-6abf9b6b6cdc)
-
-- Mengatasi duplikasi data : mengatasi data yang muncul lebih dari satu kali dalam sebuah dataset, baik secara keseluruhan maupun sebagian
-
-  ![duplicates](https://github.com/user-attachments/assets/07dc83e3-01d2-4ced-bc78-dfadfd57e1a3)
-
-
-
-## Data Preparation
-Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Tahapan ini mencakup berbagai langkah untuk memastikan data bersih, konsisten, relevan, dan terstruktur dengan baik. Data preparation yang digunakan oleh saya yaitu :
-
-- Mengatasi missing value : menyeleksi data apakah data tersebut ada yang kosong atau tidak  
-
-  ![missing](https://github.com/user-attachments/assets/cdb1d148-03a1-4e3f-80b6-96a695bff3f6)
+  Berdasarkan data yang ditemukan, terdapat 52.549 nilai kosong pada kolom tag. Oleh karena itu, pembersihan missing value dilakukan menggunakan fungsi dropna(). Fungsi ini akan menghapus baris yang memiliki nilai kosong.
 
 - Data Cleaning : proses identifikasi, perbaikan, atau penghapusan data yang tidak lengkap, tidak akurat, tidak konsisten, atau tidak relevan dalam dataset.
 
   ![cleaning](https://github.com/user-attachments/assets/93d53dc3-0831-416c-94a3-6abf9b6b6cdc)
+
+  Setelah proses pembersihan, jumlah data berkurang dari 285.762 baris menjadi 233.213 baris. Selanjutnya, lakukan pengecekan kembali untuk memastikan tidak ada missing value pada dataframe all_movies_clean.
 
 - Mengurutan data : untuk mengurutkan data berdasarkan movieId secara asceding.
 
@@ -134,27 +122,54 @@ Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang sia
 
   ![duplicates](https://github.com/user-attachments/assets/07dc83e3-01d2-4ced-bc78-dfadfd57e1a3)
 
-- Konversi data menjadi list : untuk mengubah data menjadi list
 
-  ![konversidata](https://github.com/user-attachments/assets/9e83ec7a-7926-4222-a0e9-5f3456d6958a)
+## Data Preparation
+Data preparation adalah proses mempersiapkan data mentah menjadi bentuk yang siap digunakan untuk analisis, pemodelan, atau pelatihan algoritma machine learning. Data preparation yang digunakan oleh saya yaitu :
 
-- Membuat dictionary : Untuk membuat dictionary dari data yang ada.
+1. Prepraration `content-based filtering`
 
-  ![dicsionary](https://github.com/user-attachments/assets/8c238a35-25f1-4794-9898-3a7a50fd6bc4)
+    - Konversi data menjadi list : untuk mengubah data menjadi list
+
+      ![konversidata](https://github.com/user-attachments/assets/9e83ec7a-7926-4222-a0e9-5f3456d6958a)
+  
+    - Membuat dictionary : Untuk membuat dictionary dari data yang ada.
+    
+      ![dicsionary](https://github.com/user-attachments/assets/8c238a35-25f1-4794-9898-3a7a50fd6bc4)
+  
+    - TFIDFVetorizer() : untuk melakukan pembobotan.
+
+      Menggunakan TF-IDF (Term Frequency-Inverse Document Frequency) untuk memproses data teks, dalam hal ini, data genre dari film yang ada dalam dataframe movie_new. TfidfVectorizer adalah alat dari pustaka scikit-learn yang digunakan untuk mengubah teks menjadi representasi numerik berbasis TF-IDF. TF-IDF adalah teknik yang digunakan untuk menilai pentingnya kata dalam dokumen yang bersifat kolektif atau seluruh korpus.
+
+      ![tf 1](https://github.com/user-attachments/assets/568c6172-610c-4568-b595-10f8635363a1)
+
+      ![tf 5](https://github.com/user-attachments/assets/eb7a0edd-5079-401a-8f45-b3d8331b8f62)
+
+2. Prepraration `collaborative filtering`
+
+    - Proses encoding data : melakukan konversi data
+
+      Proses encoding dilakukan pada tahap ini, dengan melakukan encode pada feature 'userId' dan 'movieId'. proses encode akan memetakan setiap nilai pada kedua feature tersebut ke dalam bentuk index.
+
+      ![preperetion 1](https://github.com/user-attachments/assets/4d619a26-01ea-466f-8601-36857c94719f)
+
+      ![preperetion 2](https://github.com/user-attachments/assets/2cb839b7-be08-407b-88a9-7dace07497e4)
+
+      Terakhir, periksa beberapa informasi dalam data seperti total pengguna, total film, ubah nilai rating menjadi tipe data float, serta cek nilai minimum dan maksimum.
+
+      ![preperetion 3](https://github.com/user-attachments/assets/2a4ce92a-2bc4-443d-8dbf-ce184a96386f)
+      
+    - Membagi data menjadi data training dan validasi : untuk membagi data untuk dilatih dan validasi.
+    
+      Data dibagi untuk data train dan validasi dengan komposisi 80/20. Pembagian ini bertujuan agar data yang digunakan dapat digunakan untuk mengembangkan model dan mengevaluasi performance dari model yang telah dikembangkan.
+
+      ![train 1](https://github.com/user-attachments/assets/6ae5ad3a-b1b8-46a1-8ac1-f6dc5863bb72)
+  
 
 ## Modeling dan Result
 Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma machine learning, yaitu `content-based filtering` yang digunakan didasarkan pada preferensi pengguna terhadap item yang telah mereka sukai di masa lalu dan `collaborative filtering` yang digunakan untuk memanfaatkan tingkat rating yang diberikan oleh pengguna terhadap film untuk menghasilkan rekomendasi yang relevan.
 
 1. Menggunakan `content-based filtering`
 *Content-Based Filtering* adalah salah satu metode dalam sistem rekomendasi yang digunakan untuk memberikan rekomendasi kepada pengguna berdasarkan karakteristik atau atribut dari item yang telah mereka interaksikan atau sukai sebelumnya. Pada proyek ini, saya akan menggunakan pendekatan content-based filtering untuk mengembangkan model yang bertujuan membangun sistem rekomendasi film sesuai dengan tujuan proyek. Proses pengembangan sistem ini dilakukan melalui beberapa tahapan, yaitu:
-
-   - TFIDFVetorizer()
-
-     Menggunakan TF-IDF (Term Frequency-Inverse Document Frequency) untuk memproses data teks, dalam hal ini, data genre dari film yang ada dalam dataframe movie_new. TfidfVectorizer adalah alat dari pustaka    scikit-learn yang digunakan untuk mengubah teks menjadi representasi numerik berbasis TF-IDF. TF-IDF adalah teknik yang digunakan untuk menilai pentingnya kata dalam dokumen yang bersifat kolektif atau seluruh korpus.
-
-     ![tf 1](https://github.com/user-attachments/assets/568c6172-610c-4568-b595-10f8635363a1)
-
-     ![tf 5](https://github.com/user-attachments/assets/eb7a0edd-5079-401a-8f45-b3d8331b8f62)
 
    - Perhitungan *cosine similarity*
 
@@ -184,7 +199,6 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
       ![recom 3](https://github.com/user-attachments/assets/e97af899-6429-46ce-ad61-9f72184b3938)
 
-  
 
     Kelebihan Content-Based Filtering
 
@@ -203,36 +217,9 @@ Proses pemodelan yang saya lakukan pada data ini mencakup penerapan algoritma ma
 
    *Collaborative Filtering* adalah teknik yang digunakan dalam sistem rekomendasi untuk memberikan rekomendasi berdasarkan preferensi atau interaksi pengguna lain. Pendekatan ini tidak bergantung pada atribut atau konten dari item itu sendiri (seperti dalam Content-Based Filtering).
 
-   - Preparation
-
-     Proses encoding dilakukan pada tahap ini, dengan melakukan encode pada feature 'userId' dan 'movieId'. proses encode akan memetakan setiap nilai pada kedua feature tersebut ke dalam bentuk index.
-     ![preperetion 1](https://github.com/user-attachments/assets/4d619a26-01ea-466f-8601-36857c94719f)
-
-     ![preperetion 2](https://github.com/user-attachments/assets/2cb839b7-be08-407b-88a9-7dace07497e4)
-
-     Terakhir, periksa beberapa informasi dalam data seperti total pengguna, total film, ubah nilai rating menjadi tipe data float, serta cek nilai minimum dan maksimum.
-
-     ![preperetion 3](https://github.com/user-attachments/assets/2a4ce92a-2bc4-443d-8dbf-ce184a96386f)
-
-   - Split Data for Training and Validation
-
-     Data dibagi untuk data train dan validasi dengan komposisi 80/20. Pembagian ini bertujuan agar data yang digunakan dapat digunakan untuk mengembangkan model dan mengevaluasi performance dari model yang telah dikembangkan.
-
-     ![train 1](https://github.com/user-attachments/assets/6ae5ad3a-b1b8-46a1-8ac1-f6dc5863bb72)
-
    - RecommenderNet
 
      ![recommennet](https://github.com/user-attachments/assets/89ac9a2f-dd2f-4c97-9c0a-f921497560f2)
-
-
-   - Training
-
-     Proses training dilakukan dengan mengimplementasikan teknik embedding untuk menghitung skor kecocokan antara film dengan users. kemudian, pada  proses compile dilakukan menggunakan BinaryCrossentropy untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, dan root mean squared error (RMSE) sebagai metrics evaluation. Proses training model berjalan sebanyak 100 epochs sebagai berikut.
-
-     ![traing 2](https://github.com/user-attachments/assets/0603faac-876e-4597-8443-be9c2aac5880)
-
-     ![training 3](https://github.com/user-attachments/assets/f4ddcd89-3d73-40c3-b9de-6213979d8a65)
-
 
    - Rekomendasi Testing
 
